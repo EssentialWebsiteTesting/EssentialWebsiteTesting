@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Essential Autism</title>
+  <link rel="icon" href="assets/ealogo.png" type="image/x-icon">
+</head>
+<body>
+  <header class="teamheader">
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="assets/EA_vert_RGB.png" alt="logo"/>
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="careers.html">Career Opportunities</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+      <div class="header__btns">
+        <button id="contact-button" class="btn">Contact Us!</button>
+      </div>
+    </nav>
+    <div class="section__container header__container" id="home">
+      <div class="logo-container">
+        <img src="assets/EA_vert_wht.png" alt="logo"/>
+      </div>
+      <h1>The Essential Family</h1>
+    </div>
+  </header>
+
+  <br>
+    <div class="ceo_section">
+    <h3 class="section__subheader">Leadership</h3>
+      <h2 class="section__header">Meet The Founder and CEO</h2>
+      <br>
+  </div>
+  <section class="section__container aboutCEO__container" id="aboutCEO">
+    
+    <div class="aboutCEO__image">
+      <img src="assets/dwayne4.jpg" alt="Dwaynepic" />
+    </div>
+    <div class="aboutCEO__content">
+      <h2 class="section__header">Dwayne Wessel</h2>
+      <p>
+        Dwayne Wessel is a dedicated Clinical Supervisor in Applied Behavior Analysis (ABA). 
+        He is passionate about supporting individuals with autism and developmental disabilities, 
+        working closely with therapists and technicians to ensure the highest standards of care. Dwayne’s 
+        collaborative approach empowers both clients and staff to achieve their goals.
+      </p>
+      <h4>
+        Dwayne is committed to developing personalized treatment plans that address the unique needs of each individual. 
+        With a focus on improving quality of life, his mission is to create meaningful, positive change for the individuals and 
+        families he serves at Essential Autism.
+      </h4>
+      <div class="ceo__socials">
+        <a href="#"><i class="ri-mail-fill"></i></a>
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+      </div>
+    </div>
+  </section> <!-- aboutCEO container -->
+  
+
+  <section class="container mt-5">
+    <div class="section__container team__container" id = "team"">
+    <h2>Meet The Rest of the Team</h2>
+    <h1>About our Experts</h1>
+</div>
+  
+    <!-- Category Buttons -->
+    <div class="text-center mb-4">
+      <button class="btn btn-primary mr-2 filter-btn" data-filter="all">All</button>
+      <button class="btn btn-primary mr-2 filter-btn" data-filter="bcba">BCBAs</button>
+      <button class="btn btn-primary mr-2 filter-btn" data-filter="technician">Technicians</button>
+      <button class="btn btn-primary mr-2 filter-btn" data-filter="administrator">Administrators</button>
+    </div>
+
+    <div class="filter-dropdown">
+        <select id="teamCategory" class="form-control">
+          <option value="all">All Categories</option>
+          <option value="bcba">BCBAs</option>
+          <option value="technician">Technicians</option>
+          <option value="administrator">Administrators</option>
+        </select>
+      </div>
+    </div>
+  
+    <!-- Team Grid -->
+    <div class="row" id="teamGrid">
+      <!-- Team members will be dynamically populated here -->
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teamModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="modalContent">
+            <!-- Detailed information will be populated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section__container map__container" id="location">
+    <div class="map__wrapper">
+      <div style="position: relative; width: 640px; height: 480px;">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1T9BMvPvV1nETH-X74wE-UMUCsMKlFB4&z=9&ll=42.24937,-83.036363&spn=5,5&ehbc=2E312F&noprof=1" width="640" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div style="position: absolute; top: 0; left: 0; width: 100vw; height: 50px; background-color: white;"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h4>About Us</h4>
+        <p>
+          At Essential Autism, we are dedicated to enhancing the lives of individuals with autism and other 
+          developmental disabilities through compassionate care and innovative therapies to help every individual reach their full potential. 
+          Join us in making a difference in our community!
+        </p>
+        <button class="btn">Contact Us</button>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Career Opportunities</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Social Media</h4>
+        <div class="footer__media">
+          <img src="assets/grouppic2.JPG" alt="media" />
+          <img src="assets/grouppic3.JPG" alt="media" />
+          <img src="assets/essentialautism.jpg" alt="media" />
+          <img src="assets/aboutpic1.png" alt="media" />
+          <img src="assets/aboutpic2.png" alt="media" />
+          <img src="assets/aboutpic3.png" alt="media" />
+        </div>
+        <div class="footer__socials">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024 Essential Autism. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const teamMembers = [
+    { 
+      name: 'John Doe', 
+      category: 'bcba', 
+      position: 'BCBA', 
+      image: 'Debbie.png', 
+      bio: "Debbie leads our administrative team, managing billing, scheduling, and client interactions. Debbie also authored a children's book to foster understanding and acceptance of autistic classmates.",
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "The Philippines"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Giraffe"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "Halloween"
+        }
+      ]
+    },
+    { 
+      name: 'Dwayne Wessel', 
+      category: 'technician', 
+      position: 'BCBA', 
+      image: 'Dwayne.png', 
+      bio: 'Dwayne Wessel, CEO and Clinical Director at Essential Autism. Dedicated to advancing Applied Behavior Analysis (ABA) to support individuals with autism and developmental disabilities.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Paris"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Panda"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "Christmas"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      position: 'administrator',
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    },
+    { 
+      name: 'Megan Wessel', 
+      category: 'administrator', 
+      image: 'Meganpic.jpg', 
+      bio: 'Megan is the daughter of Dwayne and Debbie and is a BCBA and supervisor for our technicians, providing expert guidance in Applied Behavior Analysis (ABA) therapies for over 10 years.',
+      questions: [
+        {
+          question: "If you could visit anywhere in the world, where would it be?",
+          answer: "Tokyo"
+        },
+        {
+          question: "If you could have any exotic animal as a pet, what would it be?",
+          answer: "Tiger"
+        },
+        {
+          question: "What’s your favourite holiday?",
+          answer: "New Year's Eve"
+        }
+      ]
+    }
+    
+    // Add more team members as needed
+  ];
+
+  const teamGrid = document.getElementById('teamGrid');
+  const modalTitle = document.getElementById('teamModalLabel');
+  const modalContent = document.getElementById('modalContent');
+  const categorySelect = document.getElementById('teamCategory'); // Select dropdown
+
+  function populateTeam(category) {
+    teamGrid.innerHTML = '';
+    teamMembers.forEach((member, index) => {
+      if (category === 'all' || member.category === category) {
+        const col = document.createElement('div');
+        col.classList.add('col-md-4', 'team-member');
+        col.innerHTML = `
+          <div class="mb-4">
+            <img src="assets/${member.image}" class="img-fluid rounded-circle" alt="${member.name}">
+            <h4>${member.name}</h4>
+            <p class="job-title">${member.position}</p>
+            <p class="short-description">${member.bio.substring(0, 100)}...</p>
+            <button class="btn btn-primary btn-sm view-details-btn" data-toggle="modal" data-target="#teamModal" data-name="${member.name}" data-index="${index}">Read More</button>
+          </div>
+        `;
+        teamGrid.appendChild(col);
+      }
+    });
+
+    // Event listener for Read More buttons
+    const readMoreButtons = document.querySelectorAll('.view-details-btn');
+    readMoreButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const index = btn.getAttribute('data-index');
+        const member = teamMembers[index];
+        modalTitle.textContent = member.name;
+        modalContent.innerHTML = `
+          <div class="row">
+            <div class="col-md-4">
+              <img src="assets/${member.image}" class="img-fluid rounded-circle mb-3" alt="${member.name}">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Position:</strong> ${member.position}</p>
+              <p><strong>Categories:</strong> ${member.category}</p>
+              <p>${member.bio}</p>
+              ${member.questions.map(question => `
+                <p><strong>${question.question}</strong> ${question.answer}</p>
+              `).join('')}
+            </div>
+          </div>
+        `;
+        $('#teamModal').modal('show');
+      });
+    });
+  }
+
+  // Initial population
+  populateTeam('all');
+
+  // Filter buttons
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = btn.getAttribute('data-filter');
+      populateTeam(filter);
+    });
+  });
+
+  // Dropdown change event listener
+  categorySelect.addEventListener('change', function() {
+    const selectedCategory = categorySelect.value;
+    populateTeam(selectedCategory);
+  });
+});
+
+
+
+  </script>
+</body>
+</html>
