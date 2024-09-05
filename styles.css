@@ -132,8 +132,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-
 nav {
   position: fixed;
   isolation: isolate;
@@ -165,10 +163,9 @@ nav {
   color: var(--white);
   cursor: pointer;
 }
-
 .nav__links {
   position: absolute;
-  top: 68px;
+  top: 68px; /* Adjust as necessary */
   left: 0;
   width: 100%;
   padding: 2rem;
@@ -179,13 +176,15 @@ nav {
   flex-direction: column;
   gap: 2rem;
   background-color: var(--extra-light);
-  transition: 0.5s;
-  z-index: -1;
-  transform: translateY(-100%);
+  transition: transform 0.5s ease; /* Smooth transition */
+  z-index: -1; /* Ensure it stays on top */
+  transform: translateY(-100%); /* Initially hidden */
 }
 
 .nav__links.open {
-  transform: translateY(0);
+  transform: translateY(0); /* Show when opened */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .nav__links a {
@@ -199,6 +198,7 @@ nav {
 .nav__btns {
   display: none;
 }
+
 
 .header__container {
   padding-block: 10rem;
@@ -250,15 +250,13 @@ nav {
   margin-bottom: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .header__btns {
     display: none;
   }
 }
 
-.CTA__btns {
-  margin-top: 2rem; /* Adjust margin as needed */
-}
+
 
 h3.text-center {
   font-weight: bold;
@@ -484,12 +482,21 @@ body {
 .ceo_section{
   text-align: center;
 }
-
 .aboutCEO__image {
-  border: 4px solid var(--primary-color-dark);
+  border: 4px solid transparent; /* Start with a transparent border */
   display: block; /* Ensures no extra space below the image */
   max-width: 100%; /* Ensures the image does not exceed the container */
   box-sizing: border-box; /* Ensures border is included in dimensions */
+  animation: fadeInBorder 3s forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fadeInBorder {
+  0% {
+    border-color: transparent; /* Start with a transparent border */
+  }
+  100% {
+    border-color: var(--primary-color-dark); /* End with the desired border color */
+  }
 }
 
 .aboutCEO__image img {
@@ -984,11 +991,10 @@ body {
   }
 }
 
-@media (width > 480px) {
+@media (max-width: 768px) {
   .feature__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
-
 }
 
 @media (width > 768px) {
@@ -1534,8 +1540,14 @@ iframe {
 }
 
 .about__details-content a:hover span {
-  transform: translateX(10px);
+  transform: translateY(5px);
 }
+
+
+.about__details-btn2 a:hover span {
+  transform: translateX(5px); /* Move the button 5px to the right on hover */
+}
+
 
 /* New About Page Specific Section Styles */
 .about__section-container {
@@ -1543,6 +1555,13 @@ iframe {
   margin: auto;
   padding: 5rem 1rem;
 }
+
+/* SCrolling too much */
+#ABA, #Respite, #Training, #Organizational, #Community, #Parental #aboutus, #ourteam, #story {
+  padding-top: 200px; /* Adjust this value based on your header height */
+  margin-top: -100px; /* Negative margin to offset the padding */
+}
+
 
 .about__section-subheader {
   position: relative;
@@ -1585,6 +1604,15 @@ iframe {
   font-weight: 400;
   font-family: var(--header-font);
   color: var(--text-dark);
+}
+
+.about__details-content-1,
+.about__details-content-2,
+.about__details-content-3,
+.about__details-content-4,
+.about__details-content-5,
+.about__details-content-6 {
+  scroll-margin-top: 50px; /* Adjust based on the height of the pseudo-element */
 }
 
 .about__details-content-1 .about__section-subheader::after {
@@ -1651,6 +1679,13 @@ iframe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+.footer__media img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
 }
 
 .footer__socials {
@@ -1776,51 +1811,56 @@ iframe {
   }
 }
 
-@media (width > 768px) {
+@media (width > 1200px) {
   nav {
-    position: static;
-    padding: 2rem 1rem;
-    max-width: var(--max-width);
-    margin-inline: auto;
+    position: fixed; /* Keeps the navbar at the top */
+    padding: 0.5rem 1rem; /* Reduced vertical padding */
+    background-color: var(--text-dark);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    z-index: 1000;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between items */
+    gap: 1rem;
+    z-index: 1000; /* Ensure it stays above other content */
   }
-
   
   .nav__header {
     flex: 1;
     padding: 0;
     background-color: transparent;
+    display: flex; /* Add this to ensure header items are aligned properly */
+    align-items: center; /* Center items in header vertically */
   }
-
+  
   .nav__menu__btn {
-    display: none;
+    display: none; /* Hide the menu button on larger screens */
   }
-
+  
   .nav__links {
-    position: static;
     padding: 0;
-    flex-direction: row;
-    background-color: transparent;
-    transform: none;
+    flex-direction: row; /* Change to row layout on larger screens */
+    background-color: transparent; /* Transparent background */
+    transform: none; /* Ensure it’s visible */
+    z-index: 10;
   }
-
+  
   .nav__links a {
-    color: var(--white);
+    color: var(--white); /* Use white text on larger screens */
+    display: flex; /* Make links a flex container */
+    align-items: center; /* Center text vertically within the link */
+    margin-top: -30px; /* Add a negative margin to move the text up */
   }
-
+  
   .nav__btns {
     display: flex;
     flex: 1;
+    align-items: center; /* Center buttons vertically */
   }
-
+  
   .nav__btns .btn {
     color: var(--primary-color);
     background-color: var(--white);
   }
+  
 
   .header__container {
     padding-block: 8rem 12rem;
@@ -1880,6 +1920,13 @@ iframe {
 .steps__grid{
     grid-template-columns: repeat(3, 1fr);
 } 
+@media (max-width: 768px) {
+  .steps__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 .about__details-container {
   padding-top: 0;
@@ -2363,67 +2410,106 @@ iframe {
   .offer__grid {
     gap: 2rem;
   }
-}
-.slider{
+}.slider {
+  --width: 400px; /* Default value */
+  --height: 400px; /* Default value */
   width: 100%;
   height: var(--height);
   overflow: hidden;
   mask-image: linear-gradient(
-      to right,
-      transparent,
-      #000 10% 90%,
-      transparent
+    to right,
+    transparent,
+    #000 10% 90%,
+    transparent
   );
 }
-.slider .list{
+
+.slider .list {
   display: flex;
   width: 100%;
   min-width: calc(var(--width) * var(--quantity));
   position: relative;
 }
-.slider .list .item{
+
+.slider .list .item {
   width: var(--width);
   height: var(--height);
   position: absolute;
   left: 100%;
-  animation: autoRun 10s linear infinite;
+  animation: autoRun 20s linear infinite; /* Slowed down the animation */
   transition: filter 0.5s;
-  animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+  animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1) - 20s)!important; /* Adjusted for the new duration */
 }
-.slider .list .item img{
+
+.slider .list .item img {
   width: 100%;
+  height: auto; /* Ensure the images maintain their aspect ratio */
 }
-@keyframes autoRun{
-  from{
-      left: 100%;
-  }to{
-      left: calc(var(--width) * -1);
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
   }
 }
-.slider:hover .item{
+
+.slider:hover .item {
   animation-play-state: paused!important;
   filter: grayscale(1);
 }
-.slider .item:hover{
+
+.slider .item:hover {
   filter: grayscale(0);
 }
-.slider[reverse="true"] .item{
-  animation: reversePlay 10s linear infinite;
+
+.slider[reverse="true"] .item {
+  animation: reversePlay 20s linear infinite; /* Slowed down the animation */
 }
-@keyframes reversePlay{
-  from{
-      left: calc(var(--width) * -1);
-  }to{
-      left: 100%;
+
+@keyframes reversePlay {
+  from {
+    left: calc(var(--width) * -1);
+  }
+  to {
+    left: 100%;
   }
 }
-.scroller__content{
+
+@media (max-width: 768px) {
+  .slider {
+    --width: 300px; /* Updated for tablet */
+    --height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    --width: 200px; /* Updated for mobile */
+    --height: 200px;
+  }
+
+  .slider .list {
+    display: block; /* Makes the images appear in a stack */
+  }
+  
+  .slider .item {
+    margin-bottom: 15px; /* Adds spacing between images */
+    position: relative; /* Change to relative for stacking */
+    left: 0; /* Reset left position */
+    animation: none; /* Disable animation on mobile */
+  }
+}
+
+.scroller__content {
   text-align: center;
   margin-bottom: 1rem;
   margin-top: 3rem;
   background-color: var(--secondary-color);
 }
-.image__scroller{
+
+.image__scroller {
   background-color: var(--extra-light);
   padding-bottom: 3rem;
   padding-top: 1.5rem;
@@ -2493,6 +2579,12 @@ iframe {
   gap: 1.5rem; /* Space between cards */
 }
 
+@media (max-width: 768px) {
+  .resource-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card {
   background-color: white;
   border-radius: 8px;
@@ -2524,7 +2616,28 @@ iframe {
 }
 .card-link:hover{
   background-color: var(--primary-color-dark);
+  color: var(--text-dark);
 }
 .resource__content{
   text-align: center;
+}
+footer{
+  background-color: var(--extra-light);
+}
+
+/* Adjust header padding for mobile view */
+@media (max-width: 1200px) {
+  .logo-container{
+    padding-top: 100px;
+  }
+  #home-page-header1{
+    padding-top: 100px;
+  }
+ 
+}
+#contact1{
+  background-color: var(--white);
+}
+#contact2{
+  background-color: var(--extra-light);
 }
