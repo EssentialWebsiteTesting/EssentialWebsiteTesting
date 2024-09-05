@@ -11,6 +11,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="swiper-bundle.min.css">
 
     <link rel="stylesheet" href="styles.css" />
@@ -36,18 +38,19 @@
           <li><a href="team.html">Team</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="careers.html">Career Opportunities</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
           <li><a href="resources.html">Resources</a></li>
         </ul>
         <div class="header__btns">
-          <button id="contact-button" class="btn">Contact Us!</button>
+          <a href="contact.html">
+            <button id="contact-button" class="btn">Contact Us!</button>
+          </a>
         </div>
       </nav>
       <div class="section__container header__container" id="home">
         <div class="logo-container">
             <img src="assets/EA_vert_wht.png" alt="logo"/>
         </div>
-        <h1>Learn More About Us!</h1>
+        <h1 class ="header__text">Learn More About Us!</h1>
         
         <div class="header__flex">
 
@@ -58,7 +61,7 @@
       <p class="section__subheader">Our Services</p>
       <h2 class="section__header">Catering To All Your Essential Needs</h2>
       <div class="service__grid">
-        <div class="service__card">
+        <div class="service__card" id="service-card1">
           <div class="service__icon">
             <i class="ri-p2p-fill"></i>
           </div>
@@ -70,7 +73,7 @@
             Learn more <span><i class="ri-arrow-right-line"></i></span>
           </a>
         </div>
-        <div class="service__card">
+        <div class="service__card" id="service-card2">
           <div class="service__icon">
             <i class="ri-empathize-fill"></i>
           </div>
@@ -82,7 +85,7 @@
             Learn more <span><i class="ri-arrow-right-line"></i></span>
           </a>
         </div>
-        <div class="service__card">
+        <div class="service__card" id="service-card3">
           <div class="service__icon">
             <i class="ri-megaphone-fill"></i>
           </div>
@@ -94,7 +97,7 @@
             Learn more <span><i class="ri-arrow-right-line"></i></span>
           </a>
         </div>
-        <div class="service__card">
+        <div class="service__card" id="service-card4">
           <div class="service__icon">
             <i class="ri-presentation-fill"></i>
           </div>
@@ -106,7 +109,7 @@
             Learn more <span><i class="ri-arrow-right-line"></i></span>
           </a>
         </div>
-        <div class="service__card">
+        <div class="service__card" id="service-card5">
           <div class="service__icon">
             <i class="ri-team-fill"></i>
           </div>
@@ -118,7 +121,7 @@
             Learn more <span><i class="ri-arrow-right-line"></i></span>
           </a>
         </div>
-        <div class="service__card">
+        <div class="service__card" id="service-card6">
           <div class="service__icon">
             <i class="ri-hand-heart-fill"></i>
           </div>
@@ -141,12 +144,12 @@
           <img src="assets/ea (91).jpeg" alt="about">
         </div>
         <div class="about__details-content about__details-content-1">
-          <h3 class="about__section-subheader">The Behavioral Approach</h3>
+          <h3 class="about__section-subheader" id = "service1id">The Behavioral Approach</h3>
           <h2 class="about__section-header">Applied Behavior Analysis</h2>
-          <p>
+          <p id="service1ptag">
             At Essential Autism, our Applied Behavior Analysis (ABA) services are delivered through a close collaborative effort between Board Certified Behavior Analysts (BCBAs) and dedicated technicians. But what exactly is ABA? It’s a scientifically validated method that focuses on improving specific behaviors while teaching new skills. Our team emphasizes the importance of data collection, utilizing real-time information to track progress and adjust strategies to ensure optimal outcomes for each child. This individualized approach allows us to tailor interventions to meet the unique needs of every child, fostering skill development and enhancing their quality of life.
           </p>
-          <div class="about__details-btn">
+          <div class="about__details-btn2">
             <a href="contact.html#contactnow">
               Inquire Now
               <span><i class="ri-arrow-right-line"></i></span>
@@ -154,15 +157,15 @@
           </div>
         </div>
         <div class="about__details-image about__details-image-2" id="Respite">
-          <img src="assets/ea (9).jpeg" alt="about">
+          <img src="assets/ea (91).jpeg" alt="about">
         </div>
         <div class="about__details-content about__details-content-2">
-          <h3 class="about__section-subheader">Support for Families</h3>
+          <h3 class="about__section-subheader" id = "service2id">Support for Families</h3>
           <h2 class="about__section-header">Respite Services</h2>
-          <p>
+          <p id="service2ptag">
             Understanding the challenges families face, Essential Autism offers comprehensive respite services designed to provide caregivers with a much-needed break. But what is respite? It is a temporary relief that allows families to recharge while ensuring that their loved ones receive quality care. We offer respite in both home and office settings, allowing families to choose what suits them best. Our trained technicians provide compassionate support, creating a safe environment where individuals can thrive. This unique combination of flexibility and understanding sets our respite services apart, making a positive impact on families’ overall well-being.
           </p>
-          <div class="about__details-btn">
+          <div class="about__details-btn2">
             <a href="contact.html#contactnow">
               Inquire Now
               <span><i class="ri-arrow-right-line"></i></span>
@@ -170,15 +173,15 @@
           </div>
         </div>
         <div class="about__details-image about__details-image-3" id="Training">
-          <img src="assets/ea (78).jpg" alt="about">
+          <img src="assets/ea (91).jpeg" alt="about">
         </div>
         <div class="about__details-content about__details-content-3">
-          <h3 class="about__section-subheader">Empowering Knowledge</h3>
+          <h3 class="about__section-subheader" id = "service3id">Empowering Knowledge</h3>
           <h2 class="about__section-header">Training and Speaking</h2>
-          <p>
+          <p id="service3ptag">
             Dwayne Wessel, our founder, has a wealth of experience in speaking and training, having shared his expertise at various conferences, schools, and community events. But what does training look like? Our training programs empower both our employees and external stakeholders with the knowledge and skills necessary to support children with autism effectively. Dwayne’s engaging presentations focus on practical strategies and evidence-based practices, ensuring participants leave with valuable insights. This commitment to education and community outreach distinguishes Essential Autism as a leader in the field, enhancing the support network available to families.
           </p>
-          <div class="about__details-btn">
+          <div class="about__details-btn2">
             <a href="contact.html#contactnow">
               Inquire Now
               <span><i class="ri-arrow-right-line"></i></span>
@@ -192,12 +195,12 @@
           <img src="assets/ea (91).jpeg" alt="about">
         </div>
         <div class="about__details-content about__details-content-1">
-          <h3 class="about__section-subheader">Navigating Resources</h3>
+          <h3 class="about__section-subheader" id = "service4id">Navigating Resources</h3>
           <h2 class="about__section-header">Organizational Assistance</h2>
-          <p class = "ABA">
+          <p class = "ABA" id="service4ptag">
             At Essential Autism, we understand the complexities of navigating available resources and services. Dwayne Wessel’s experience extends beyond our organization, as he has helped numerous companies streamline their services to better support individuals with autism. Our organizational assistance focuses on connecting families with essential resources, answering questions like, “Where can I find the support my child needs?” Our technicians work diligently to guide families through the often-confusing landscape of services, ensuring that they receive the help necessary to thrive. This unique approach ensures families feel supported every step of the way.
           </p>
-          <div class="about__details-btn">
+          <div class="about__details-btn2">
             <a href="contact.html#contactnow">
               Inquire Now
               <span><i class="ri-arrow-right-line"></i></span>
@@ -205,15 +208,15 @@
           </div>
         </div>
         <div class="about__details-image about__details-image-2" id="Community">
-          <img src="assets/ea (9).jpeg" alt="about">
+          <img src="assets/ea (91).jpeg" alt="about">
         </div>
         <div class="about__details-content about__details-content-2">
-          <h3 class="about__section-subheader">Fostering Inclusivity</h3>
+          <h3 class="about__section-subheader" id = "service5id">Fostering Inclusivity</h3>
           <h2 class="about__section-header">Community Involvement</h2>
-          <p>
+          <p id = "service5ptag">
             Essential Autism actively engages with the community, creating inclusive environments for children with autism to connect and socialize. Our weekly gaming groups, featuring popular platforms like Minecraft and Roblox, provide opportunities for children to interact with peers in a fun and supportive setting. Led by our trained technicians, these online groups allow children to build friendships while developing essential social skills. By fostering these connections, Essential Autism stands out as an organization dedicated to not just therapy, but also creating a sense of community and belonging.
           </p>
-          <div class="about__details-btn">
+          <div class="about__details-btn2">
             <a href="contact.html#contactnow">
               Inquire Now
               <span><i class="ri-arrow-right-line"></i></span>
@@ -221,15 +224,15 @@
           </div>
         </div>
         <div class="about__details-image about__details-image-3" id="Parental">
-          <img src="assets/ea (78).jpg" alt="about">
+          <img src="assets/ea (91).jpeg" alt="about">
         </div>
         <div class="about__details-content about__details-content-3">
-          <h3 class="about__section-subheader">Enhancing Development</h3>
+          <h3 class="about__section-subheader" id = "service6id">Enhancing Development</h3>
           <h2 class="about__section-header">Parental Guidance</h2>
-          <p>
+          <p id = "service6ptag">
             At Essential Autism, we believe in empowering parents through collaboration and support. Our BCBAs work closely with families to provide tailored guidance and training, addressing questions like, “How can I support my child’s development at home?” Our parental guidance programs equip families with effective strategies to enhance their child's skills and well-being. This collaborative approach not only strengthens the bond between parent and child but also ensures that parents feel confident in their ability to foster their child's growth. This focus on partnership is what makes Essential Autism truly unique in the landscape of autism services.
           </p>
-          <div class="about__details-btn">
+          <div class="about__details-btn2">
             <a href="contact.html#contactnow">
               Inquire Now
               <span><i class="ri-arrow-right-line"></i></span>
@@ -240,20 +243,8 @@
     </section>
       
     
-      
 
-    
-    <section class="section__container map__container" id="location">
-    
-        <div class="map__wrapper">
-          <div style="position: relative; width: 640px; height: 480px;">
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1T9BMvPvV1nETH-X74wE-UMUCsMKlFB4&z=9&ll=42.24937,-83.036363&spn=5,5&ehbc=2E312F&noprof=1" width="640" height="480" width="640" height="480"></iframe>
-            <div style="position: absolute; top: 0; left: 0; width: 100vw; height: 50px; background-color: white;"></div>
-          </div>
-        </div>
-      </section>
-
-    <footer id="contact">
+    <footer id="contact1">
       <div class="section__container footer__container">
         <div class="footer__col">
           <h4>About Us</h4>
@@ -262,7 +253,11 @@
             developmental disabilities through compassionate care and innovative therapies to help every individual reach their full potential. 
             Join us in making a difference in our community!
           </p>
-          <button class="btn">Contact Us</button>
+          <div class="header__btns">
+            <a href="contact.html">
+              <button id="contact-button" class="btn">Contact Us!</button>
+            </a>
+          </div>
         </div>
         <div class="footer__col">
           <h4>Quick Links</h4>
@@ -286,10 +281,9 @@
             <img src="assets/aboutpic3.png" alt="media" />
           </div>
           <div class="footer__socials">
-            <a href="#"><i class="ri-facebook-fill"></i></a>
-            <a href="#"><i class="ri-twitter-fill"></i></a>
-            <a href="#"><i class="ri-linkedin-fill"></i></a>
-            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="https://www.facebook.com/essential.autism/"><i class="ri-facebook-fill"></i></a>
+            <a href="https://www.linkedin.com/company/essential-autism-educational-services-inc/?originalSubdomain=ca"><i class="ri-linkedin-fill"></i></a>
+            <a href="https://www.instagram.com/essentialautism_es/"><i class="ri-instagram-line"></i></a>
           </div>
         </div>
       </div>
