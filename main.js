@@ -284,6 +284,15 @@ ScrollReveal().reveal("#card3", {
   delay: 700,
 }); 
 
+ScrollReveal().reveal(".about__details-btn", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+ScrollReveal().reveal(".about__details-btn2", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
 
 
 //service page
