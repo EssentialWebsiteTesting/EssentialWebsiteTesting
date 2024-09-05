@@ -2,18 +2,48 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
-menuBtn.addEventListener("click", (e) => {
+// Toggle the mobile menu
+menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 
+  // Change the icon based on the menu state
   const isOpen = navLinks.classList.contains("open");
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
-navLinks.addEventListener("click", (e) => {
+// Close the mobile menu when a link is clicked
+navLinks.addEventListener("click", () => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
+// Optional: Close the menu when clicking outside of it
+document.addEventListener("click", (e) => {
+  if (!menuBtn.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains("open")) {
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-line");
+  }
+});
+
+
+//readmore dropdown
+function toggleReadMore(button) {
+  const extraContent = button.parentNode.previousElementSibling; // Get the extra content paragraph
+  const isExpanded = extraContent.style.display === 'block';
+
+  if (isExpanded) {
+    // Collapse the content
+    extraContent.style.display = 'none';
+    button.innerHTML = 'Read more <span><i class="ri-arrow-down-line"></i></span>';
+  } else {
+    // Expand the content
+    extraContent.style.display = 'block';
+    button.innerHTML = 'Read less <span><i class="ri-arrow-up-line"></i></span>';
+  }
+}
+
+
+//faq
 document.querySelectorAll('.faq2__header').forEach(header => {
   header.addEventListener('click', () => {
       const description = header.nextElementSibling; // Get the description div
@@ -85,18 +115,281 @@ ScrollReveal().reveal(".aboutCEO__content .section__header", {
 
 ScrollReveal().reveal(".aboutCEO__content p", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 600,
 });
 
 ScrollReveal().reveal(".aboutCEO__content h4", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 700,
 });
 
 ScrollReveal().reveal(".ceo__socials", {
   ...scrollRevealOption,
-  delay: 2000,
+  delay: 800,
 });
+
+ScrollReveal().reveal(".team__container h2", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".team__container h1", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".filter-dropdown", {
+  ...scrollRevealOption,
+  delay: 525,
+});
+
+ScrollReveal().reveal(".row", {
+  ...scrollRevealOption,
+  delay: 550,
+});
+
+ScrollReveal().reveal(".animate-me", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".section__subheader", {
+  ...scrollRevealOption,
+  delay: 200,
+});
+ScrollReveal().reveal(".section__header", {
+  ...scrollRevealOption,
+  delay: 300,
+});
+
+ScrollReveal().reveal(".section__description", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal("#feature1", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+ScrollReveal().reveal("#feature2", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+ScrollReveal().reveal("#feature3", {
+  ...scrollRevealOption,
+  delay: 700,
+}); 
+
+
+ScrollReveal().reveal("#aboutcard1", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+ScrollReveal().reveal("#aboutcard2", {
+  ...scrollRevealOption,
+  delay: 550,
+}); 
+ScrollReveal().reveal("#aboutcard3", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+ScrollReveal().reveal(".about__details-image-1", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+ScrollReveal().reveal(".about__details-image-2", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+ScrollReveal().reveal(".about__details-image-3", {
+  ...scrollRevealOption,
+  delay: 700,
+}); 
+
+
+ScrollReveal().reveal(".about__section-subheader", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+ScrollReveal().reveal(".about__section-header", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+ScrollReveal().reveal(".about__section-description", {
+  ...scrollRevealOption,
+  delay: 700,
+}); 
+
+ScrollReveal().reveal(".team__container", {
+  ...scrollRevealOption,
+  delay: 700,
+}); 
+ScrollReveal().reveal(".step1", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+ScrollReveal().reveal(".step1ptag", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+ScrollReveal().reveal(".step2", {
+  ...scrollRevealOption,
+  delay: 700,
+}); 
+ScrollReveal().reveal(".step2ptag", {
+  ...scrollRevealOption,
+  delay: 800,
+}); 
+
+ScrollReveal().reveal(".step3", {
+  ...scrollRevealOption,
+  delay: 900,
+}); 
+ScrollReveal().reveal(".step3ptag", {
+  ...scrollRevealOption,
+  delay: 1000,
+}); 
+
+ScrollReveal().reveal(".section__links", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+
+ScrollReveal().reveal(".header__form", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+
+
+ScrollReveal().reveal(".faq2__content", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+
+ScrollReveal().reveal("#card1", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+ScrollReveal().reveal("#card2", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+ScrollReveal().reveal("#card3", {
+  ...scrollRevealOption,
+  delay: 700,
+}); 
+
+
+
+//service page
+
+
+ScrollReveal().reveal("#service-card1", {
+  ...scrollRevealOption,
+  delay: 100,
+}); 
+
+ScrollReveal().reveal("#service-card2", {
+  ...scrollRevealOption,
+  delay: 200,
+}); 
+
+ScrollReveal().reveal("#service-card3", {
+  ...scrollRevealOption,
+  delay: 300,
+}); 
+
+ScrollReveal().reveal("#service-card4", {
+  ...scrollRevealOption,
+  delay: 400,
+}); 
+
+ScrollReveal().reveal("#service-card5", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+ScrollReveal().reveal("#service-card6", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+
+ScrollReveal().reveal("#service1ptag", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+ScrollReveal().reveal("#service2ptag", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+ScrollReveal().reveal("#service3ptag", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+ScrollReveal().reveal("#service4ptag", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+ScrollReveal().reveal("#service5ptag", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+ScrollReveal().reveal("#service6ptag", {
+  ...scrollRevealOption,
+  delay: 600,
+}); 
+
+
+//index
+
+ScrollReveal().reveal(".services-grid", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+
+ScrollReveal().reveal(".swiper", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+
+ScrollReveal().reveal(".faq__content", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+ScrollReveal().reveal(".officeptag", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+ScrollReveal().reveal(".slider", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+ScrollReveal().reveal(".partners", {
+  ...scrollRevealOption,
+  delay: 500,
+}); 
+
+ScrollReveal().reveal(".logo-container", {
+  ...scrollRevealOption,
+  delay: 100,
+}); 
+
+
 
 
 const faq = document.querySelector(".faq__grid");
